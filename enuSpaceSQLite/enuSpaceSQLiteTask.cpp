@@ -595,11 +595,10 @@ std::string Call_Select(std::string dbname, std::string query)
 				{
 					const char* szTemp = sqlite3_column_name(pVM, i);
 					root[szTemp] = Record[i];
-					//bDBCheck = true;
 				}
 
 				nRet = sqlite3_finalize(pVM);
-				Json::StyledWriter writer;
+				Json::FastWriter writer;
 				std::string outputConfig = writer.write(root);
 
 				return outputConfig;
