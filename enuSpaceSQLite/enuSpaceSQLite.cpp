@@ -1030,9 +1030,9 @@ extern "C" __declspec(dllexport) void SQLite_Select(FuncParam* pParam)
 				if (pVarOutStruct->type == DEF_STRING)
 				{
 					if (strResult == "")
-						*(CString*)pVarOutStruct->pValue = StringToCString("Select success");
-					else
 						*(CString*)pVarOutStruct->pValue = StringToCString("Select Fail");
+					else
+						*(CString*)pVarOutStruct->pValue = StringToCString("Select success");
 				}
 			}
 		}
