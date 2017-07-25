@@ -10,3 +10,4 @@ std::string string_format(const std::string fmt_str, ...);
 CString StringToCString(std::string str);
 std::string CStringToString(CString reqStr);
 int GetArrayIndexFromDimension(CString strOrgDim, CString strDimension);
+std::string ReplaceAll(std::string &str, const std::string& from, const std::string& to);
