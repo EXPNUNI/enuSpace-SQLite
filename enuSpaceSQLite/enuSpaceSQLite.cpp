@@ -116,14 +116,14 @@ extern "C" __declspec(dllexport) void OnEditComponent(wchar_t* pStrSymbolName, w
 extern "C" __declspec(dllexport) void OnShowComponent(wchar_t* pStrSymbolName, wchar_t* pStrID);
 //////////////////////////////////////////////////////////////////////////////////////////////
 // component call functions.
-extern "C" __declspec(dllexport) void SQLite_DB(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_CreateTable(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_Insert(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_Update(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_Delete(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_Execute(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_Select(FuncParam* pParam);
-extern "C" __declspec(dllexport) void SQLite_Expert(FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_DB(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_CreateTable(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_Insert(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_Update(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_Delete(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_Execute(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_Select(wchar_t* id, FuncParam* pParam);
+extern "C" __declspec(dllexport) void SQLite_Expert(wchar_t* id, FuncParam* pParam);
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -631,7 +631,7 @@ extern "C" __declspec(dllexport) void OnShowComponent(wchar_t* pStrSymbolName, w
 
 
 
-extern "C" __declspec(dllexport) void SQLite_DB(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_DB(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -647,7 +647,7 @@ extern "C" __declspec(dllexport) void SQLite_DB(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_IsExistTable(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_IsExistTable(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -700,7 +700,7 @@ extern "C" __declspec(dllexport) void SQLite_IsExistTable(FuncParam* pParam)
 }
 
 
-extern "C" __declspec(dllexport) void SQLite_CreateTable(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_CreateTable(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -756,7 +756,7 @@ extern "C" __declspec(dllexport) void SQLite_CreateTable(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_Insert(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_Insert(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -811,7 +811,7 @@ extern "C" __declspec(dllexport) void SQLite_Insert(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_Update(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_Update(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -865,7 +865,7 @@ extern "C" __declspec(dllexport) void SQLite_Update(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_Delete(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_Delete(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -919,7 +919,7 @@ extern "C" __declspec(dllexport) void SQLite_Delete(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_Execute(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_Execute(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -973,7 +973,7 @@ extern "C" __declspec(dllexport) void SQLite_Execute(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_Select(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_Select(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
@@ -1039,7 +1039,7 @@ extern "C" __declspec(dllexport) void SQLite_Select(FuncParam* pParam)
 	}
 }
 
-extern "C" __declspec(dllexport) void SQLite_Expert(FuncParam* pParam)
+extern "C" __declspec(dllexport) void SQLite_Expert(wchar_t* id, FuncParam* pParam)
 {
 	if (pParam)
 	{
