@@ -110,7 +110,7 @@ extern "C" __declspec(dllexport) bool IsEnableTransfer(wchar_t* pFromType, wchar
 extern "C" __declspec(dllexport) bool OnInit();
 extern "C" __declspec(dllexport) bool OnLoad();
 extern "C" __declspec(dllexport) bool OnUnload();
-extern "C" __declspec(dllexport) bool OnTask();
+extern "C" __declspec(dllexport) bool OnTask(__int64 time);
 
 extern "C" __declspec(dllexport) void OnEditComponent(wchar_t* pStrSymbolName, wchar_t* pStrID);
 extern "C" __declspec(dllexport) void OnShowComponent(wchar_t* pStrSymbolName, wchar_t* pStrID);
@@ -608,7 +608,7 @@ extern "C" __declspec(dllexport) bool OnInit()
 	return Init_SQLite();
 }
 
-extern "C" __declspec(dllexport) bool OnTask()
+extern "C" __declspec(dllexport) bool OnTask(__int64 time)
 {
 	return Task_SQLite();
 }
